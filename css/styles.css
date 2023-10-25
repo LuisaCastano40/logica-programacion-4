@@ -1,0 +1,136 @@
+/* Importamos las fuentes */
+@import url('https://fonts.cdnfonts.com/css/lt-binary-neue');
+@import url('https://fonts.cdnfonts.com/css/lt-bump-smrd');
+
+:root{
+    --colorFondo:linear-gradient(0deg, rgba(13,11,91,1) 27%, rgba(133,129,237,1) 85%);
+    --tipografiaNum:'LT Binary Neue Round', sans-serif;
+    --tipografiaText: 'LT Bump SmRd', sans-serif;
+    --colorTextoHeader:#0d0b5b;
+    --colorTextoFooter:#8581ed;
+    --colorFondo2:#ffffff5c;
+    --colorPantalla:#ffffff80;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: var(--colorFondo);
+    overflow: hidden;
+    font-family: var(--tipografiaText);
+}
+.pantalla::-webkit-scrollbar {
+    width: 100px; 
+    height: 5px;
+}
+.pantalla::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+
+/* --------------HEADER----------- */
+header{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    font-size: 25px;
+    color: var(--colorTextoHeader);
+}
+/* ---------------MAIN------------ */
+main{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorTextoHeader);
+}
+.container-inputs{
+    width: 30%;
+    height: 80%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--colorFondo2);
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    gap: 10px;
+}
+.input input{
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--colorPantalla);
+    border: none;
+    outline: none;
+    border-bottom: var(--colorTextoHeader) solid 2px;
+}
+.container-buttons{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.container-buttons button{
+    padding: 10px 20px;
+    background-color: var(--colorTextoHeader);
+    color: whitesmoke;
+    font-family: var(--tipografiaText);
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 10px;
+}
+.container-buttons button:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.pantalla{
+    width: 100%;
+    height: 100px;
+    border: solid 3px var(--colorTextoHeader);
+    background-color: var(--colorPantalla);
+    border-radius: 5px;
+    margin:auto;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-family: var(--tipografiaNum);
+    color: var(--colorTextoHeader);
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 20px;
+}
+/* --------------FOOTER----------- */
+footer{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    font-size: 20px;
+    color: var(--colorTextoFooter);
+}
